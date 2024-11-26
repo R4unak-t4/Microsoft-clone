@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Microsoft</title>
+    <link rel="icon" href="assets/4202105_microsoft_logo_social_social%20media_icon.png">
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+
+    }
+    header{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 54px;
+        cursor: pointer;
+    }
+    .logoContainer{
+        margin-left: 80px;
+        width: 137px;
+        height: 100%;
+        padding: 16px 6px 16px 10px;
+    }
+    .logo{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(0.9);
+    }
+    nav{
+        height: 100%;
+        padding-left: 2px;
+        padding-right: 1px;
+        margin-left: 40px;
+    }
+    .navbar{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        list-style-type: none;
+        font-size: 12.9px;
+        font-family: Roboto;
+        gap: 20px;
+    }
+    .navbar li:hover{
+        text-decoration: underline;
+    }
+    .sideNav{
+        margin-left: 240px;
+    }
+    .SearchCont{
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .search{
+        width: 18px;
+    }
+    .CartCont{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cart{
+        width: 16px;
+    }
+    .profile{
+        width: 40%;
+    }
+    main{
+        width: 100%;
+        height: auto;
+    }
+    .Section1ImgCont{
+        background-image: url("assets/FirstBanner.png");
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        aspect-ratio: 16/9;
+    }
+    .Section1{
+        height: 450px;
+        width: 100%;
+
+    }
+    .ShopCat{
+        display: flex;
+        justify-content: center;
+        height: 200px;
+        width: 100%;
+    }
+    .CatHolder{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        height: 100%;
+        align-content: center;
+        font-family: Roboto;
+        font-size: 16px;
+        color: #0059ff;
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .CatImg{
+        align-self: center;
+        width: 48px;
+    }
+    .Categories{
+        display: flex;
+        gap: 80px;
+    }
+    .FirstFour{
+        height: 570px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .boxFirst{
+        width: 21%;
+        height: 84%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .boxFirstImageHolder{
+        width: 100%;
+        height: 39%;
+    }
+    .boxfirstimg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+    .boxfirstinfo{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 15px;
+        font-family: Roboto;
+        gap: 12px;
+        height: 61%;
+    }
+    .boxfirstButton{
+        width: 48%;
+        height: 33px;
+        background-color: #1e6ffb;
+        font-size: medium;
+        color: white;
+        font-family: Roboto;
+        border: none;
+        align-self: end;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .boxfirstButton:hover{
+        transform: translateX(12px);
+    }
+    .XboxBanner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+    }
+    .XboxBannerContainer{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 150px;
+        width: 90%;
+        height: 90%;
+        background-image: url("assets/xboxbanner.avif");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .xboxinfo{
+        width: 30%;
+        color: white;
+        font-size: xx-large;
+        font-family: Roboto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .xboxp{
+        font-size: 18px;
+    }
+    .XboxButton{
+        width: 30%;
+        height: 33px;
+        background-color: #1e6ffb;
+        font-size: medium;
+        color: white;
+        font-family: Roboto;
+        border: none;
+        align-self: end;
+    }
+    .Box2title{
+        margin-left: 80px;
+        font-family: Roboto;
+    }
+    .ThreeBoxes{
+        height: 570px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .boxThird{
+        width: 28.5%;
+        height: 84%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .boxThirdImgHolder{
+        width: 100%;
+        height: 50%;
+    }
+    .boxthirdinfo{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 15px;
+        font-family: Roboto;
+        gap: 2px;
+        height: 50%;
+    }
+    .Socials{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .socialiteam{
+        width: 25px;
+    }
+    .socialholder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        gap: 20px;
+    }
+    .SocialsTitle{
+        font-family: Roboto;
+        margin-right: 10px;
+    }
+    footer{
+        width: 100%;
+        height: 400px;
+        background-color: #efefef;
+    }
+    .upperFotter{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .footbox{
+        width: 20%;
+        height: 90%;
+    }
+    .upperinfo{
+        list-style-type: none;
+        font-family: Roboto;
+        color: gray;
+        cursor: pointer;
+    }
+    .upperinfo li{
+        margin: 10px;
+    }
+    .upperinfo li:hover{
+        text-decoration: underline;
+        color: black;
+    }
+    .upperinfoTitle{
+        font-family: Roboto;
+        color: gray;
+        margin: 10px;
+        color: #616161;
+    }
+    .lowerfotter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Roboto;
+        height: 20%;
+        color: gray;
+    }
+    .leftSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        list-style-type: none;
+        gap: 30px;
+    }
+    .leftSection li:hover{
+        text-decoration: underline;
+    }
+    .leftItem{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .lefyimg{
+        width: 28px;
+    }
+
+</style>
+
+<body>
+    <header>
+        <div class="logoContainer">
+    <img src="assets/logo.png" class="logo">
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li>Microsoft 365</li>
+                <li>Teams</li>
+                <li>Copilot</li>
+                <li>Windows</li>
+                <li>Surface</li>
+                <li>Xbox</li>
+                <li>Black Friday</li>
+                <li>Small Business</li>
+                <li>Support</li>
+            </ul>
+        </nav>
+        <div class="sideNav">
+            <ul class="navbar">
+                <li>All Microsoft </li>
+                <li><div class="SearchCont">Search <img class="search" src="assets/211818_search_icon.svg"></div></li>
+                <li><div class="CartCont">Cart
+                    <img class="cart" src="assets/9027005_shopping_cart_thin_icon.svg">
+                </div></li>
+                <li>Sign in</li>
+                <li><img class="profile" src="assets/172628_user_male_icon.svg"></li>
+            </ul>
+        </div>
+    </header>
+<main>
+    <section class="Section1">
+        <div class="Section1ImgCont">
+        </div>
+    </section>
+    <section class="ShopCat">
+        <ul class="Categories">
+            <li class="CatHolder"><img class="CatImg" src="assets/Laptop.svg" alt=""><p>Black Friday deals: Surface</p></li>
+            <li class="CatHolder"><img class="CatImg" src="assets/xbox.svg" alt=""><p>Black Friday deals: Xbox</p></li>
+            <li class="CatHolder"><img class="CatImg" src="assets/Keyboard.svg" alt=""><p>Shop for accessories</p></li>
+            <li class="CatHolder"><img class="CatImg" src="assets/case.svg" alt=""><p>Shop Business deals</p></li>
+            <li class="CatHolder"><img class="CatImg" src="assets/computer.svg" alt=""><p>Find your next PC</p></li>
+        </ul>
+    </section>
+    <section class="FirstFour">
+        <div id="b1-1" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/boxfirst1.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">Save up to $600 on Surface Laptop Studio 2</h1>
+                <p>Cutting-edge design meets incredible performance in this versatile laptop perfect for everything from creativity to entertainment. Select devices on sale now. For a limited time.</p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+        <div id="b1-2" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/xbox1.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">Xbox Series X - 1TB Digital Edition</h1>
+                <p>Uncover new realms this holiday with the fastest Xbox yet— now featuring an all-digital console in Robot White with a 1TB SSD.</p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+        <div id="b1-3" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/xbox2.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">$50 off Xbox Series S – 512GB (White)</h1>
+                <p>Black Friday is back—save big on the smallest, sleekest Xbox ever.</p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+        <div id="b1-4" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/xboxcontroller.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">$10 off all Xbox Wireless Controllers</h1>
+                <p>Light up the season with pro controllers designed to elevate your gameplay.</p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="XboxBanner">
+        <div class="XboxBannerContainer">
+            <div class="xboxinfo">
+                <h1>Game Pass</h1>
+                <p class="xboxp">Unwrap 100+ high-quality games on console, PC, and cloud for one low monthly price. </p>
+                <button class="XboxButton">Join Now</button>
+            </div>
+        </div>
+    </section>
+    <h1 class="Box2title">For business</h1>
+    <section class="FirstFour">
+        <div id="b2-1" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/laptop2.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">Save up to $280 on Surface Pro 10 for Business</h1>
+                <p>Maximize connection, security, and data-driven insights with the latest Intel processors. Get the flexibility of a tablet and the power of a laptop.</p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+        <div id="b2-2" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/microsoft365.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">Microsoft 365 Copilot</h1>
+                <p>Save time and focus on the things that matter most with AI in Microsoft 365 for business. </p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+        <div id="b2-3" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/art.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">Join the era of AI</h1>
+                <p>Create, communicate, and code with the latest Microsoft AI solutions.</p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+        <div id="b2-4" class="boxFirst">
+            <div class="boxFirstImageHolder">
+                <img class="boxfirstimg" src="assets/art2.avif">
+            </div>
+            <div class="boxfirstinfo">
+                <h1 class="boxfirstTitle">Catch up on Microsoft Ignite</h1>
+                <p>Explore insightful presentations on the latest AI innovations from top industry experts—all on your own schedule.</p>
+                <button class="boxfirstButton">Shop Now</button>
+            </div>
+        </div>
+    </section>
+    <h1 class="Box2title">Explore more about AI and Copilot</h1>
+    <section class="ThreeBoxes">
+        <div id="b3-1" class="boxThird">
+            <div class="boxThirdImgHolder">
+                <img class="boxfirstimg" src="assets/deepfake.avif">
+            </div>
+            <div class="boxthirdinfo">
+                <h1 class="boxfirstTitle">Fighting deepfakes and disinformation</h1>
+                <p>Microsoft is developing tools and practices to help identify AI-manipulated content—and bring more transparency to digital media.</p>
+                <button class="boxfirstButton">Learn Now</button>
+            </div>
+        </div>
+        <div id="b3-2" class="boxThird">
+            <div class="boxThirdImgHolder">
+                <img class="boxfirstimg" src="assets/3dart.avif">
+            </div>
+            <div class="boxthirdinfo">
+                <h1 class="boxfirstTitle">Get creative with Copilot</h1>
+                <p>From baking to business marketing, here’s a look at nine clever ways people are tackling their days with AI.</p>
+                <button class="boxfirstButton">Learn Now</button>
+            </div>
+        </div>
+        <div id="b3-3" class="boxThird">
+            <div class="boxThirdImgHolder">
+                <img class="boxfirstimg" src="assets/news.avif">
+            </div>
+            <div class="boxthirdinfo">
+                <h1 class="boxfirstTitle">Tame your inbox with AI</h1>
+                <p>Combat email overload with Copilot in Outlook. Discover how it can summarize email threads, highlight key action items, write first drafts, and more.</p>
+                <button class="boxfirstButton">Learn Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="Socials">
+        <h1 class="SocialsTitle">Follow Microsoft</h1>
+        <ul class="socialholder">
+            <li ><img width="36px" src="assets/facebook.svg" alt=""></li>
+            <li><img class="socialiteam" src="assets/x.svg" alt=""></li>
+            <li><img src="assets/linked.svg" alt="" width="40px"></li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <section class="upperFotter">
+        <div class="footbox">
+            <h1 class="upperinfoTitle">Microsoft Store</h1>
+            <ul class="upperinfo">
+                <li>Account profile</li>
+                <li>Download Center</li>
+                <li>Microsoft Store support</li>
+                <li>Returns</li>
+                <li>Order tracking</li>
+                <li>Certified Refurbished</li>
+                <li>Microsoft Store Promise</li>
+                <li>Flexible Payments</li>
+            </ul>
+        </div>
+        <div class="footbox">
+            <h1 class="upperinfoTitle">Education</h1>
+            <ul class="upperinfo">
+                <li>Microsoft in education</li>
+                <li>Devices for education</li>
+                <li>Microsoft Teams for Education</li>
+                <li>Microsoft 365 Education</li>
+                <li>How to buy for your school</li>
+                <li>Educator training and development</li>
+                <li>Deals for students and parents</li>
+                <li>Azure for students</li>
+            </ul>
+        </div>
+        <div class="footbox">
+            <h1 class="upperinfoTitle">Business</h1>
+            <ul class="upperinfo">
+                <li>Microsoft Cloud</li>
+                <li>Microsoft Security</li>
+                <li>Dynamics 365</li>
+                <li>Microsoft 365</li>
+                <li>Microsoft Power Platform</li>
+                <li>Microsoft Teams</li>
+                <li>Microsoft 365 Copilot</li>
+                <li>Small Business</li>
+            </ul>
+
+        </div>
+        <div class="footbox">
+            <h1 class="upperinfoTitle">Developer & IT</h1>
+            <ul class="upperinfo">
+                <li>Azure</li>
+                <li>Developer Center</li>
+                <li>Documentation</li>
+                <li>Microsoft Learn</li>
+                <li>Microsoft Tech Community</li>
+                <li>Azure Marketplace</li>
+                <li>AppSource</li>
+                <li>Visual Studio</li>
+            </ul>
+        </div>
+    </section>
+    <section class="lowerfotter">
+        <ul class="leftSection">
+        <li class="leftItem"><img class="lefyimg" src="assets/Globe.svg"><p>English (United States)</p></li>
+            <li>Your Privacy Choices</li>
+            <li>Consumer Health Privacy</li>
+            <li>Help</li>
+            <li>Contact Us</li>
+            <li>Terms</li>
+            <li>© Microsoft 2024</li>
+        </ul>
+    </section>
+</footer>
+    <script>
+        const rev = ScrollReveal();
+        rev.reveal('.Section1', { delay: 500 });
+        rev.reveal('.CatHolder',{delay : 300, origin : 'left',interval : 300, distance : '50px'});
+        //boxfirst section
+        rev.reveal('#b1-1',{duration : 1700, origin : 'bottom',interval : 700, distance : '50px'})
+        rev.reveal('#b1-2',{duration : 1700, origin : 'top',interval : 700, distance : '30px'})
+        rev.reveal('#b1-3',{duration : 1700, origin : 'bottom',interval : 700, distance : '50px'})
+        rev.reveal('#b1-4',{duration : 1700, origin : 'top',interval : 700, distance : '50px'});
+
+        //xboxbanner
+        rev.reveal('.XboxBannerContainer',{ duration:800})
+        rev.reveal('.xboxinfo',{duration : 1000, origin : 'right',interval :700})
+
+        //box second
+        rev.reveal('#b2-1',{duration : 1700, origin : 'left',interval : 700, distance : '50px'})
+        rev.reveal('#b2-2',{duration : 1700, origin : 'top',interval : 700, distance : '30px'})
+        rev.reveal('#b2-3',{duration : 1700, origin : 'bottom',interval : 700, distance : '50px'})
+        rev.reveal('#b2-4',{duration : 1700, origin : 'right',interval : 700, distance : '50px'});
+
+        //threeboxes
+        rev.reveal('#b3-1',{duration : 1500, origin : 'left',interval :700, distance : '40px'})
+        rev.reveal('#b3-2',{duration : 1500, origin : 'bottom',interval :700, distance : '40px'})
+        rev.reveal('#b3-3',{duration : 1500, origin : 'right',interval :700, distance : '40px'})
+
+        //socials
+        
+
+
+    </script>
+
+</body>
+</html>
